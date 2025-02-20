@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}?v=1.0">
+</head>
+<body>
+
+    <h1>TO-DO LIST</h1>
+
+    <div class="main">
+        <div class="container">
+            <div class="inputCon">
+                <form id="todo-form">
+                    {% csrf_token %}
+                    <div class="title">
+                        <h2>CREATE TASKS</h2>
+                        <input type="text" id="title" placeholder="Title" required>
+                    </div>
+                    <div class="desc">
+                        <input type="text" id="desc" placeholder="Description" required>
+                    </div>
+                    {% comment %} <label>
+                        <input type="checkbox" id="isDone"> is Done?
+                    </label> {% endcomment %}
+                    <button type="submit" class="submitBut">ADD TASK</button>
+                </form>
+            </div>
+            <div class="tasksCon">
+                <h2>TASKS</h2>
+                <ul id="todo-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

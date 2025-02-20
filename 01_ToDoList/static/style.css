@@ -1,0 +1,244 @@
+* {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+
+body {
+    text-align: center;
+    background-color: #000000;
+    padding: 0px;
+    margin: 0px;
+    /* min-height: 100vh; */
+    /* overflow: hidden; */
+}
+
+h1 {
+    color: hsl(0, 0%, 100%);
+}
+
+h2{
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(90deg, rgb(3, 0, 37), rgb(41, 0, 0));
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 12px;
+    height: 82vh;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+
+
+.inputCon {
+    /* background-color: yellow; */
+    width: 48%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 50px; */
+    /* border: 2px solid rgb(151, 151, 151); */
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-right: 2px;
+
+}
+
+.inputCon:hover {
+    background: linear-gradient( rgb(0, 0, 0), rgb(93, 0, 0));
+    box-sizing: border-box;
+    outline: 1px solid white;
+
+}
+
+.tasksCon {
+    display: flex;  /* Enable Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: flex-start; /* Align tasks from the top */
+    /* margin-bottom: 50px; */
+    width: 48%;
+    height: 80%;
+    border-radius: 6px;
+    box-sizing: border-box;
+
+}
+
+
+
+
+.tasksCon ul {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Center horizontally */
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    /* margin-top: 50px; */
+    box-sizing: border-box;
+    overflow-y: auto;
+    /* height: 90%; */
+
+}
+
+
+.tasksCon:hover{
+    background: linear-gradient( rgb(0, 0, 0), rgb(11, 0, 91));
+    outline: 1px solid white;
+    box-sizing: border-box;
+}
+
+input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    min-width: fit-content;
+
+}
+
+button {
+    height: 45px;
+    min-width: 45px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    /* outline: 1px solid rgb(0, 188, 41); */
+    /* font-size: medium; */
+    border-radius: 10px;
+    /* margin-top: 20px; */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.submitBut {
+    height: 35px;
+    width: 220px;
+    padding: 10px;
+    background-color: rgb(123, 255, 127);
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+    font-size: medium;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+button:hover {
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.199);
+}
+
+.submitBut:hover {
+    border: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 8px rgba(213, 213, 213, 0.579);
+}
+
+
+ul {
+
+    list-style-type: none;
+    padding: 0;
+    /* width: 400px; */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    
+}
+
+li {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    width: 400px;
+    height: 35px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+li:hover{
+    background-color: rgb(201, 236, 255);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.title, .desc {
+    width: 60vw;
+}
+
+.title input, .desc input {
+    width: 40%;
+    height: 35px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    font-size: large;
+    border: none;
+    
+}
+
+input:focus, button:focus {
+    outline: none;
+}
+
+
+
+.taskChecker {
+    color: rgb(255, 255, 255);
+    background-color: yellow;
+    min-width: 30px;
+    min-height: 30px;
+    margin-right: 10px;
+}
+
+label {
+    color: #fff;
+}
+
+label #idDone{
+    height: 20px;
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: rgb(0, 0, 0); /* Optional: Make text gray */
+    opacity: 0.75; /* Optional: Reduce opacity */
+}
+
+
+/* For WebKit Browsers (Chrome, Edge, Safari) */
+.tasksCon ul::-webkit-scrollbar {
+    width: 0px; /* Hide vertical scrollbar */
+    height: 0px; /* Hide horizontal scrollbar */
+}
+
+/* For Firefox */
+.tasksCon ul {
+    scrollbar-width: none; /* Hide scrollbar */
+}
+
+/* For Internet Explorer & Edge */
+.tasksCon ul {
+    -ms-overflow-style: none; /* Hide scrollbar */
+}
+
